@@ -47,6 +47,10 @@ return {
         encodeURL   = require('base64mix').encodeURL,
         decodeURL   = require('base64mix').decodeURL,
         decodeMix   = require('base64mix').decodeMix
+    },
+    hex = {
+        encode  = require('hex').encode,
+        decode  = require('hex').decode
     }
 };
 
