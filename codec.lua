@@ -40,6 +40,13 @@ return {
         decode2396  = require('url.codec').decode2396,
         encode3986  = require('url.codec').encode3986,
         decode3986  = require('url.codec').decode3986
+    },
+    base64 = {
+        encode      = require('base64mix').encode,
+        decode      = require('base64mix').decode,
+        encodeURL   = require('base64mix').encodeURL,
+        decodeURL   = require('base64mix').decodeURL,
+        decodeMix   = require('base64mix').decodeMix
     }
 };
 
