@@ -14,7 +14,8 @@ dependencies = {
     "lua-cjson >= 2.1.0",
     "url >= 1.0.1",
     "base64mix >= 1.0.0",
-    "hex >= 1.0.0"
+    "hex >= 1.0.0",
+    "idna >= 1.0.0"
 }
 build = {
     type = "builtin",

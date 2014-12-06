@@ -49,8 +49,12 @@ return {
         decodeMix   = require('base64mix').decodeMix
     },
     hex = {
-        encode  = require('hex').encode,
-        decode  = require('hex').decode
+        encode = require('hex').encode,
+        decode = require('hex').decode
+    },
+    idna = {
+        encode = require('idna').encode,
+        decode = require('idna').decode
     }
 };
 
