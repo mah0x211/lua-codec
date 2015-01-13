@@ -12,10 +12,11 @@ description = {
 dependencies = {
     "lua >= 5.1",
     "lua-cjson >= 2.1.0",
-    "url >= 1.0.1",
     "base64mix >= 1.0.0",
+    "geo >= 1.1.0",
     "hex >= 1.0.0",
-    "idna >= 1.0.0"
+    "idna >= 1.0.0",
+    "url >= 1.0.1"
 }
 build = {
     type = "builtin",
