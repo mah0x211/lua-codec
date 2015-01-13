@@ -55,6 +55,10 @@ return {
     idna = {
         encode = require('idna').encode,
         decode = require('idna').decode
+    },
+    geo = {
+        encode = require('geo').encode,
+        decode = require('geo').decode
     }
 };
 
