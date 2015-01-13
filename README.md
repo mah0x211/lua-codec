@@ -9,6 +9,7 @@ encoding and decoding module collection.
 
 - url: https://github.com/mah0x211/lua-url
 - base64mix: https://github.com/mah0x211/lua-base64mix
+- geo: https://github.com/mah0x211/lua-geo
 - hex: https://github.com/mah0x211/lua-hex
 - idna: https://github.com/mah0x211/lua-idna
 - lua-cjson: http://www.kyne.com.au/~mark/software/lua-cjson.php
@@ -218,5 +219,45 @@ print( inspect( dec ) );
     }
 }
 ]]
+```
+
+
+## codec.geo module
+
+please refer to geo module documentation - https://github.com/mah0x211/lua-geo - for more details.
+
+### Encode
+
+- `hash, err = geo.encode( lat:number, lon:number, precision:uint )`
+
+```lua
+local inspect = require('util').inspect;
+local geo = require('codec').geo;
+local precision = 16;
+local lat = 35.673343;
+local lon = 139.710388;
+local hash = geo.encode( lat, lon, precision );
+
+print( hash ); -- 'xn76gnjurcpggseg'
+```
+
+
+### Decode
+
+- `tbl, err = geo.decode( geohash:string )`
+
+```lua
+local inspect = require('util').inspect;
+local geo = require('codec').geo;
+local hash = 'xn76gnjurcpggseg';
+local latlon, err = geo.decode( hash );
+
+print( inspect( latlon ) );
+--[[
+{
+    lat = 35.673342999935,
+    lon = 139.71038800008
+}
+--]]
 ```
 
